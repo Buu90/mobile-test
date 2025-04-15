@@ -1,0 +1,62 @@
+@font-face {
+  font-family: 'Roboto';
+  font-display: swap;
+  src: url('../fonts/Roboto-Bold.woff2') format('woff2'),
+    url('../fonts/Roboto-Bold.woff') format('woff');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'SF Pro Display Ultra Light';
+  font-display: swap;
+  src: url('../fonts/SF-Pro-Display-Ultralight.woff2') format('woff2'),
+    url('../fonts/SF-Pro-Display-Ultralight.woff') format('woff');
+  font-weight: 200;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'SF Pro Display Light';
+  font-display: swap;
+  src: url('../fonts/SF-Pro-Display-Lightt.woff2') format('woff2'),
+    url('../fonts/SF-Pro-Display-Light.woff') format('woff');
+  font-weight: 200;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'SF Pro Display regular';
+  font-display: swap;
+  src: url('../fonts/sfprodisplayregular.woff2') format('woff2'),
+    url('../fonts/sfprodisplayregular.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'SF Pro Display medium';
+  font-display: swap;
+  src: url('../fonts/sfprodisplaymedium.woff2') format('woff2'),
+    url('../fonts/sfprodisplaymedium.woff') format('woff');
+  font-weight: 590;
+  font-style: normal;
+}
+
+@font-face {
+	font-family: 'SF Pro Display semibold';
+	font-display: swap;
+	src: url('../fonts/SF-Pro-Display-Semibold.woff2') format('woff2'),
+	  url('../fonts/SF-Pro-Display-Semibold.woff') format('woff');
+	font-weight: 600;
+	font-style: normal;
+  }
+
+@font-face {
+  font-family: 'SF Pro Display heavy';
+  font-display: swap;
+  src: url('../fonts/sfprodisplayheavy.woff2') format('woff2'),
+    url('../fonts/sfprodisplayheavy.woff') format('woff');
+  font-weight: 850;
+  font-style: normal;
+}

@@ -1,0 +1,13 @@
+.footer {
+  background-color: $dark4;
+  padding-bottom: 38px;
+  &__list {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  }
+  &__link {
+    @include footer();
+    border-bottom: solid 1px $gray2;
+  }
+}

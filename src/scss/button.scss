@@ -1,0 +1,12 @@
+.btn {
+    &__continue {
+        background-color: $white;
+        border-radius: 100px;
+        .link {
+            @include btn();
+            text-align: center;
+            display: block;
+            padding: 16px 0;
+        }
+    }
+}

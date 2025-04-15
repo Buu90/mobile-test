@@ -1,0 +1,64 @@
+$white: #FFFFFF;
+$dark: #FFFFFF33;
+$dark2: #25212F;
+$dark3: #070B33;
+$dark4: #0C081A;
+$dark5: #141131;
+$gray: #BDBCBF;
+$gray2: #55525D;
+$gray3: #54535A;
+$pink: #fd94f4;
+$pink2: #ff96f4;
+$purple: #632af7;
+$purple2: #bc1fef;
+$blue: #01b4ff;
+$blue2: #00b5ff;
+$darkBlue: #0035ff;
+
+@mixin title($height: 46px, $size: 42px, $color: $white, $family: 'SF Pro Display heavy') {
+    font-family: $family;
+    color: $color;
+    font-size: $size;
+    line-height: $height;
+  }
+
+@mixin feature($height: 100%, $size: 12px, $color: $white, $family: 'SF Pro Display regular') {
+    font-family: $family;
+    color: $color;
+    font-size: $size;
+    line-height: $height;
+  }
+
+  @mixin subscription-type($height: 100%, $size: 16px, $color: $white, $family: 'SF Pro Display semibold') {
+    font-family: $family;
+    color: $color;
+    font-size: $size;
+    line-height: $height;
+  }
+
+  @mixin subscription-text($height: 100%, $size: 16px, $color: $gray, $family: 'SF Pro Display regular') {
+    font-family: $family;
+    color: $color;
+    font-size: $size;
+    line-height: $height;
+  }
+
+  @mixin subscription-label($height: 100%, $size: 13px, $color: $white, $family: 'Roboto') {
+    font-family: $family;
+    color: $color;
+    font-size: $size;
+    line-height: $height;
+  }
+  @mixin btn($height: 24px, $size: 20px, $color: $dark3, $family: 'SF Pro Display semibold') {
+    font-family: $family;
+    color: $color;
+    font-size: $size;
+    line-height: $height;
+  }
+
+  @mixin footer($height: 18px, $size: 13px, $color: $gray2, $family: 'SF Pro Display Light') {
+    font-family: $family;
+    color: $color;
+    font-size: $size;
+    line-height: $height;
+  }

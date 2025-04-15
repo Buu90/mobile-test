@@ -1,0 +1,54 @@
+<div class="modal" id="modal">
+  <div class="modal__close" id="closeModalBtn">
+    <img src="@img/cross.svg" alt="" data-translate="Restore">
+  </div>
+  <h2 class="modal__title" data-translate="Get Unlimited <br>Access" data-max-length="20"></h2>
+  <div class="language-switcher">
+    <a href="?lang=en">English</a>
+    <a href="?lang=es">Español</a>
+    <a href="?lang=fr">Français</a>
+    <a href="?lang=de">Deutsch</a>
+    <a href="?lang=ja">日本語</a>
+    <a href="?lang=pt">Português</a>
+  </div>
+  <div class="modal__features">
+    @@include('components/feature.html', {
+      "text": "Unlimited Art <br>Creation"
+    })
+  
+    @@include('components/feature.html', {
+      "text": "Exclusive <br>Styles"
+    })
+  
+    @@include('components/feature.html', {
+      "text": "Magic Avatars <br>With 20% Off"
+    })
+  </div>
+  <div class="modal__subscriptions">
+    <div class="highlight">
+      @@include('components/subscription.html', {
+        "highlightClass": "subscription--best-offer",
+        "subscriptionType": "yearly",
+        "url": "https://apple.com/",
+        "displayLabel": "block",
+        "label": "BEST OFFER",
+        "type": "YEARLY ACCESS",
+        "yearlyPrice": "Just {{price}} per year",
+        "weeklyPrice": "{{price}} <br>per week"
+      })
+    </div>
+      @@include('components/subscription.html', {
+        "highlightClass": "",
+        "subscriptionType": "weekly",
+        "url": "https://google.com/",
+        "displayLabel": "none",
+        "label": "",
+        "type": "WEEKLY ACCESS",
+        "yearlyPrice": "",
+        "weeklyPrice": "{{price}} <br>per week"
+      })
+  </div>
+  <div class="btn">
+    @@include('components/button.html', { "title": "Continue", "id": "continueLink", "styleClass": "btn__continue" })
+  </div>
+</div>

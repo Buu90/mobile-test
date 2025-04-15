@@ -1,0 +1,130 @@
+.modal {
+  position: absolute;
+  top: -80px;
+  z-index: 1;
+  padding: 0 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  height: 100%;
+  width: 100%;
+  &__subscriptions {
+    margin-bottom: 8px;
+  }
+  &__close {
+    cursor: pointer;
+    margin-bottom: auto;
+    margin-top: 116px;
+    width: max-content;
+  }
+  &__title {
+    @include title();
+    text-align: center;
+    margin-bottom: 24px;
+  }
+  &__features {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 34px;
+  }
+  &__feature {
+    display: flex;
+    align-items: flex-end;
+    width: 110px;
+    height: 146px;
+    border-radius: 11.4px;
+    background-size: cover;
+    background-position: center;
+
+    &:first-child {
+      background-image: url('../img/featureBg1.png');
+    }
+
+    &:nth-child(2) {
+      background-image: url('../img/featureBg2.png');
+    }
+
+    &:nth-child(3) {
+      background-image: url('../img/featureBg3.png');
+    }
+
+  }
+  &__feature-text {
+    @include feature();
+    padding: 12px 8px;
+    min-height: 24px;
+  }
+}
+
+.subscription {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: $dark2;
+  border-radius: 100px;
+  padding: 9px 56px 9px 24px;
+  margin-bottom: 8px;
+  position: relative;
+  cursor: pointer;
+  border: 1px solid transparent;
+  transition: all 0.3s ease;
+  min-height: 56px;
+  &--active {
+    background-color: $gray3;
+    border: 1px solid $white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+
+    .subscription__label {
+      background-image: linear-gradient(to right, $white, $white);
+      color: $dark5;
+      box-shadow: none;
+
+    }
+    .subscription__label-wrapper {
+      background-image: linear-gradient(to right, $white, $white);
+    }
+  }  
+  &__type {
+    @include subscription-type();
+    text-transform: uppercase;
+  }
+  &__price,
+  &__description {
+    @include subscription-text();
+  }
+  &__wrapper {
+    padding: 1px;
+    border-radius: 100px;
+    background-image: linear-gradient(to right, $pink2, $purple, $blue2);
+  }
+  &__label-wrapper {
+    display: inline-block;
+    padding: 1px;
+    border-radius: 100px;
+    background-image: linear-gradient(to right, $pink2, $purple, $blue);
+    position: absolute;
+    top: -10px;
+    right: 25px;
+  }
+
+  &__label {
+    @include subscription-label();
+    font-weight: 700;
+    display: inline-block;
+    background-image: linear-gradient(to right, $purple2, $darkBlue);
+    border-radius: 100px;
+    padding: 2px 22px;
+    text-transform: uppercase;
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.4959);
+    transition: all 0.3s ease;
+  }
+}
+
+.highlight {
+  padding: 1px 0px 0px 0px;
+  border-radius: 100px;
+  background: linear-gradient(to right, rgba(253, 148, 244, 0), $pink, $blue, rgba(1, 180, 255, 0));
+  background-repeat: no-repeat;
+  background-size: 130% 35%;
+  background-position: -64% 0%;
+}
