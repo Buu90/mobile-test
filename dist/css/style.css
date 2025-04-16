@@ -250,7 +250,7 @@ a {
     height: 153px;
   }
 }
-@media (max-width: 390px) {
+@media (max-width: 395px) {
   .modal__feature {
     width: 110px;
     height: 146px;
