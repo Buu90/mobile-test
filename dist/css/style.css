@@ -5,7 +5,6 @@
   font-weight: 700;
   font-style: normal;
 }
-
 @font-face {
   font-family: "SF Pro Display Ultra Light";
   font-display: swap;
@@ -13,7 +12,6 @@
   font-weight: 200;
   font-style: normal;
 }
-
 @font-face {
   font-family: "SF Pro Display Light";
   font-display: swap;
@@ -21,7 +19,6 @@
   font-weight: 200;
   font-style: normal;
 }
-
 @font-face {
   font-family: "SF Pro Display regular";
   font-display: swap;
@@ -29,7 +26,6 @@
   font-weight: 400;
   font-style: normal;
 }
-
 @font-face {
   font-family: "SF Pro Display medium";
   font-display: swap;
@@ -37,7 +33,6 @@
   font-weight: 590;
   font-style: normal;
 }
-
 @font-face {
   font-family: "SF Pro Display semibold";
   font-display: swap;
@@ -45,7 +40,6 @@
   font-weight: 600;
   font-style: normal;
 }
-
 @font-face {
   font-family: "SF Pro Display heavy";
   font-display: swap;
@@ -53,7 +47,6 @@
   font-weight: 850;
   font-style: normal;
 }
-
 html,
 body,
 div,
@@ -144,7 +137,6 @@ video {
 }
 
 /* HTML5 display-role reset for older browsers */
-
 article,
 aside,
 details,
@@ -196,36 +188,34 @@ a {
 
 .modal {
   position: absolute;
-  top: -80px;
+  top: -120px;
   z-index: 1;
   padding: 0 24px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: end;
+  flex-direction: column;
+  justify-content: end;
   height: 100%;
   width: 100%;
 }
-
+@media (max-width: 390px) {
+  .modal {
+    top: -80px;
+  }
+}
 .modal__subscriptions {
   margin-bottom: 8px;
 }
-
 .modal__close {
   cursor: pointer;
   margin-bottom: auto;
-  margin-top: 116px;
-  width: -webkit-max-content;
-  width: -moz-max-content;
+  margin-top: 170px;
   width: max-content;
 }
-
+@media (max-width: 390px) {
+  .modal__close {
+    margin-top: 116px;
+  }
+}
 .modal__title {
   font-family: "SF Pro Display heavy";
   color: #FFFFFF;
@@ -234,40 +224,92 @@ a {
   text-align: center;
   margin-bottom: 24px;
 }
-
 .modal__features {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  justify-content: space-between;
   margin-bottom: 34px;
 }
-
 .modal__feature {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
-  width: 110px;
-  height: 146px;
+  align-items: flex-end;
+  width: 118px;
+  height: 162px;
   border-radius: 11.4px;
   background-size: cover;
   background-position: center;
 }
-
-.no-webp .modal__feature:first-child {
-  background-image: url("../img/featureBg1.png"); }
-
-.no-webp .modal__feature:nth-child(2) {
-  background-image: url("../img/featureBg2.png"); }
-
-.no-webp .modal__feature:nth-child(3) {
-  background-image: url("../img/featureBg3.png"); }
-
+@media (max-width: 400px) {
+  .modal__feature {
+    width: 114px;
+    height: 153px;
+  }
+}
+@media (max-width: 390px) {
+  .modal__feature {
+    width: 110px;
+    height: 146px;
+  }
+}
+@media (max-width: 380px) {
+  .modal__feature {
+    width: 106px;
+    height: 139px;
+  }
+}
+.modal__feature:first-child {
+  background-image: url("../img/featureBg1.png");
+}
+@supports (background-image: image-set(url("../img/featureBg1.webp") 1x)) {
+  .modal__feature:first-child {
+    background-image: image-set(url("../img/featureBg1.webp") 1x, url("../img/featureBg1@2x.webp") 2x, url("../img/featureBg1@3x.webp") 3x);
+  }
+}
+@media only screen and (min-device-pixel-ratio: 2) {
+  .modal__feature:first-child {
+    background-image: url("../img/featureBg1@2x.png");
+  }
+}
+@media only screen and (min-device-pixel-ratio: 3) {
+  .modal__feature:first-child {
+    background-image: url("../img/featureBg1@3x.png");
+  }
+}
+.modal__feature:nth-child(2) {
+  background-image: url("../img/featureBg2.png");
+}
+@supports (background-image: image-set(url("../img/featureBg2.webp") 1x)) {
+  .modal__feature:nth-child(2) {
+    background-image: image-set(url("../img/featureBg2.webp") 1x, url("../img/featureBg2@2x.webp") 2x, url("../img/featureBg2@3x.webp") 3x);
+  }
+}
+@media only screen and (min-device-pixel-ratio: 2) {
+  .modal__feature:nth-child(2) {
+    background-image: url("../img/featureBg2@2x.png");
+  }
+}
+@media only screen and (min-device-pixel-ratio: 3) {
+  .modal__feature:nth-child(2) {
+    background-image: url("../img/featureBg2@3x.png");
+  }
+}
+.modal__feature:nth-child(3) {
+  background-image: url("../img/featureBg3.png");
+}
+@supports (background-image: image-set(url("../img/featureBg3.webp") 1x)) {
+  .modal__feature:nth-child(3) {
+    background-image: image-set(url("../img/featureBg3.webp") 1x, url("../img/featureBg3@2x.webp") 2x, url("../img/featureBg3@3x.webp") 3x);
+  }
+}
+@media only screen and (min-device-pixel-ratio: 2) {
+  .modal__feature:nth-child(3) {
+    background-image: url("../img/featureBg3@2x.png");
+  }
+}
+@media only screen and (min-device-pixel-ratio: 3) {
+  .modal__feature:nth-child(3) {
+    background-image: url("../img/featureBg3@3x.png");
+  }
+}
 .modal__feature-text {
   font-family: "SF Pro Display regular";
   color: #FFFFFF;
@@ -278,15 +320,9 @@ a {
 }
 
 .subscription {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  align-items: center;
+  justify-content: space-between;
   background-color: #25212F;
   border-radius: 100px;
   padding: 9px 56px 9px 24px;
@@ -294,31 +330,22 @@ a {
   position: relative;
   cursor: pointer;
   border: 1px solid transparent;
-  -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
   min-height: 56px;
 }
-
 .subscription--active {
   background-color: #54535A;
   border: 1px solid #FFFFFF;
-  -webkit-box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
-
 .subscription--active .subscription__label {
-  background-image: -webkit-gradient(linear, left top, right top, from(#FFFFFF), to(#FFFFFF));
   background-image: linear-gradient(to right, #FFFFFF, #FFFFFF);
   color: #141131;
-  -webkit-box-shadow: none;
-          box-shadow: none;
+  box-shadow: none;
 }
-
 .subscription--active .subscription__label-wrapper {
-  background-image: -webkit-gradient(linear, left top, right top, from(#FFFFFF), to(#FFFFFF));
   background-image: linear-gradient(to right, #FFFFFF, #FFFFFF);
 }
-
 .subscription__type {
   font-family: "SF Pro Display semibold";
   color: #FFFFFF;
@@ -326,33 +353,26 @@ a {
   line-height: 100%;
   text-transform: uppercase;
 }
-
-.subscription__price,
-.subscription__description {
+.subscription__price, .subscription__description {
   font-family: "SF Pro Display regular";
   color: #BDBCBF;
   font-size: 16px;
   line-height: 100%;
 }
-
 .subscription__wrapper {
   padding: 1px;
   border-radius: 100px;
-  background-image: -webkit-gradient(linear, left top, right top, from(#ff96f4), color-stop(#632af7), to(#00b5ff));
   background-image: linear-gradient(to right, #ff96f4, #632af7, #00b5ff);
 }
-
 .subscription__label-wrapper {
   display: inline-block;
   padding: 1px;
   border-radius: 100px;
-  background-image: -webkit-gradient(linear, left top, right top, from(#ff96f4), color-stop(#632af7), to(#01b4ff));
   background-image: linear-gradient(to right, #ff96f4, #632af7, #01b4ff);
   position: absolute;
   top: -10px;
   right: 25px;
 }
-
 .subscription__label {
   font-family: "Roboto";
   color: #FFFFFF;
@@ -360,21 +380,17 @@ a {
   line-height: 100%;
   font-weight: 700;
   display: inline-block;
-  background-image: -webkit-gradient(linear, left top, right top, from(#bc1fef), to(#0035ff));
   background-image: linear-gradient(to right, #bc1fef, #0035ff);
   border-radius: 100px;
   padding: 2px 22px;
   text-transform: uppercase;
-  -webkit-box-shadow: 0 0 6px rgba(0, 0, 0, 0.4959);
-          box-shadow: 0 0 6px rgba(0, 0, 0, 0.4959);
-  -webkit-transition: all 0.3s ease;
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.4959);
   transition: all 0.3s ease;
 }
 
 .highlight {
   padding: 1px 0px 0px 0px;
   border-radius: 100px;
-  background: -webkit-gradient(linear, left top, right top, from(rgba(253, 148, 244, 0)), color-stop(#fd94f4), color-stop(#01b4ff), to(rgba(1, 180, 255, 0)));
   background: linear-gradient(to right, rgba(253, 148, 244, 0), #fd94f4, #01b4ff, rgba(1, 180, 255, 0));
   background-repeat: no-repeat;
   background-size: 130% 35%;
@@ -385,18 +401,11 @@ a {
   background-color: #0C081A;
   padding-bottom: 38px;
 }
-
 .footer__list {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  align-items: center;
+  justify-content: space-around;
 }
-
 .footer__link {
   font-family: "SF Pro Display Light";
   color: #55525D;
@@ -409,7 +418,6 @@ a {
   background-color: #FFFFFF;
   border-radius: 100px;
 }
-
 .btn__continue .link {
   font-family: "SF Pro Display semibold";
   color: #070B33;
@@ -420,50 +428,53 @@ a {
   padding: 16px 0;
 }
 
-.no-webp .main {
-  background-image: url("../img/bg.jpg"); }
-
 .main {
-  position: relative;
+  background-image: url("../img/bg.jpg");
   background-size: cover;
   background-position: center;
+  background-repeat: no-repeat;
+}
+@media (max-width: 380px) {
+  .main {
+    background-position: 0 15%;
+  }
+}
+@supports (background-image: image-set(url("../img/bg.webp") 1x)) {
+  .main {
+    background-image: image-set(url("../img/bg.webp") 1x, url("../img/bg@2x.webp") 2x, url("../img/bg@3x.webp") 3x);
+  }
+}
+@media only screen and (min-resolution: 192dpi), only screen and (min-device-pixel-ratio: 2) {
+  .main {
+    background-image: url("../img/bg@2x.jpg");
+  }
+}
+@media only screen and (min-resolution: 288dpi), only screen and (min-device-pixel-ratio: 3) {
+  .main {
+    background-image: url("../img/bg@3x.jpg");
+  }
 }
 
 * {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 html,
 body {
   font-family: SF Pro Display;
   height: 100%;
+  background-color: #0C081A;
 }
 
 .wrapper {
   position: relative;
-  max-width: 390px;
+  max-width: 430px;
   margin: 0 auto;
   min-height: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
 }
 
 .main {
-  -webkit-box-flex: 1;
-      -ms-flex: 1 1 auto;
-          flex: 1 1 auto;
+  flex: 1 1 auto;
 }
-
-.webp .modal__feature:first-child { background-image: url(../img/featureBg1.webp); }
-
-.webp .modal__feature:nth-child(2) { background-image: url(../img/featureBg2.webp); }
-
-.webp .modal__feature:nth-child(3) { background-image: url(../img/featureBg3.webp); }
-
-.webp .main { background-image: url(../img/bg.webp); }

@@ -13,10 +13,11 @@ html,
 body {
   font-family: SF Pro Display;
   height: 100%;
+  background-color: $dark4;
 }
 .wrapper {
   position: relative;
-  max-width: 390px;
+  max-width: 430px;
   margin: 0 auto;
   min-height: 100%;
   display: flex;

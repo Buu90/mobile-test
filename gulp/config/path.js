@@ -17,6 +17,10 @@ export const path = {
   },
   src: {
     js: `${srcFolder}/js/app.js`,
+    retinaImages: [
+      `${srcFolder}/img/@2x/**/*.{jpg,jpeg,png}`,
+      `${srcFolder}/img/@3x/**/*.{jpg,jpeg,png}`,
+    ],
     images: `${srcFolder}/img/**/*.{jpg,jpeg,png,gif,webp}`,
     svg: `${srcFolder}/img/**/*.svg`,
     scss: `${srcFolder}/scss/style.scss`,

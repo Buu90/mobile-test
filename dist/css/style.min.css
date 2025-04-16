@@ -1,1 +1,480 @@
-@font-face{font-family:Roboto;font-display:swap;src:url(../fonts/Roboto-Bold.woff2) format("woff2"),url(../fonts/Roboto-Bold.woff) format("woff");font-weight:700;font-style:normal}@font-face{font-family:"SF Pro Display Ultra Light";font-display:swap;src:url(../fonts/SF-Pro-Display-Ultralight.woff2) format("woff2"),url(../fonts/SF-Pro-Display-Ultralight.woff) format("woff");font-weight:200;font-style:normal}@font-face{font-family:"SF Pro Display Light";font-display:swap;src:url(../fonts/SF-Pro-Display-Lightt.woff2) format("woff2"),url(../fonts/SF-Pro-Display-Light.woff) format("woff");font-weight:200;font-style:normal}@font-face{font-family:"SF Pro Display regular";font-display:swap;src:url(../fonts/sfprodisplayregular.woff2) format("woff2"),url(../fonts/sfprodisplayregular.woff) format("woff");font-weight:400;font-style:normal}@font-face{font-family:"SF Pro Display medium";font-display:swap;src:url(../fonts/sfprodisplaymedium.woff2) format("woff2"),url(../fonts/sfprodisplaymedium.woff) format("woff");font-weight:590;font-style:normal}@font-face{font-family:"SF Pro Display semibold";font-display:swap;src:url(../fonts/SF-Pro-Display-Semibold.woff2) format("woff2"),url(../fonts/SF-Pro-Display-Semibold.woff) format("woff");font-weight:600;font-style:normal}@font-face{font-family:"SF Pro Display heavy";font-display:swap;src:url(../fonts/sfprodisplayheavy.woff2) format("woff2"),url(../fonts/sfprodisplayheavy.woff) format("woff");font-weight:850;font-style:normal}a,abbr,acronym,address,applet,article,aside,audio,b,big,blockquote,body,canvas,caption,center,cite,code,dd,del,details,dfn,div,dl,dt,em,embed,fieldset,figcaption,figure,footer,form,h1,h2,h3,h4,h5,h6,header,hgroup,html,i,iframe,img,ins,kbd,label,legend,li,mark,menu,nav,object,ol,output,p,pre,q,ruby,s,samp,section,small,span,strike,strong,sub,summary,sup,table,tbody,td,tfoot,th,thead,time,tr,tt,u,ul,var,video{margin:0;padding:0;border:0;font-size:100%;font:inherit;vertical-align:baseline}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:after,blockquote:before,q:after,q:before{content:"";content:none}table{border-collapse:collapse;border-spacing:0}input:focus{outline:0}a{text-decoration:none}.modal{position:absolute;top:-80px;z-index:1;padding:0 24px;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-direction:column;flex-direction:column;-webkit-box-pack:end;-ms-flex-pack:end;justify-content:end;height:100%;width:100%}.modal__subscriptions{margin-bottom:8px}.modal__close{cursor:pointer;margin-bottom:auto;margin-top:116px;width:-webkit-max-content;width:-moz-max-content;width:max-content}.modal__title{font-family:"SF Pro Display heavy";color:#fff;font-size:42px;line-height:46px;text-align:center;margin-bottom:24px}.modal__features{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between;margin-bottom:34px}.modal__feature{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-align:end;-ms-flex-align:end;align-items:flex-end;width:110px;height:146px;border-radius:11.4px;background-size:cover;background-position:center}.no-webp .modal__feature:first-child{background-image:url(../img/featureBg1.png)}.no-webp .modal__feature:nth-child(2){background-image:url(../img/featureBg2.png)}.no-webp .modal__feature:nth-child(3){background-image:url(../img/featureBg3.png)}.modal__feature-text{font-family:"SF Pro Display regular";color:#fff;font-size:12px;line-height:100%;padding:12px 8px;min-height:24px}.subscription{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between;background-color:#25212f;border-radius:100px;padding:9px 56px 9px 24px;margin-bottom:8px;position:relative;cursor:pointer;border:1px solid transparent;-webkit-transition:all .3s ease;transition:all .3s ease;min-height:56px}.subscription--active{background-color:#54535a;border:1px solid #fff;-webkit-box-shadow:0 4px 8px rgba(0,0,0,.3);box-shadow:0 4px 8px rgba(0,0,0,.3)}.subscription--active .subscription__label{background-image:-webkit-gradient(linear,left top,right top,from(#fff),to(#fff));background-image:linear-gradient(to right,#fff,#fff);color:#141131;-webkit-box-shadow:none;box-shadow:none}.subscription--active .subscription__label-wrapper{background-image:-webkit-gradient(linear,left top,right top,from(#fff),to(#fff));background-image:linear-gradient(to right,#fff,#fff)}.subscription__type{font-family:"SF Pro Display semibold";color:#fff;font-size:16px;line-height:100%;text-transform:uppercase}.subscription__description,.subscription__price{font-family:"SF Pro Display regular";color:#bdbcbf;font-size:16px;line-height:100%}.subscription__wrapper{padding:1px;border-radius:100px;background-image:-webkit-gradient(linear,left top,right top,from(#ff96f4),color-stop(#632af7),to(#00b5ff));background-image:linear-gradient(to right,#ff96f4,#632af7,#00b5ff)}.subscription__label-wrapper{display:inline-block;padding:1px;border-radius:100px;background-image:-webkit-gradient(linear,left top,right top,from(#ff96f4),color-stop(#632af7),to(#01b4ff));background-image:linear-gradient(to right,#ff96f4,#632af7,#01b4ff);position:absolute;top:-10px;right:25px}.subscription__label{font-family:Roboto;color:#fff;font-size:13px;line-height:100%;font-weight:700;display:inline-block;background-image:-webkit-gradient(linear,left top,right top,from(#bc1fef),to(#0035ff));background-image:linear-gradient(to right,#bc1fef,#0035ff);border-radius:100px;padding:2px 22px;text-transform:uppercase;-webkit-box-shadow:0 0 6px rgba(0,0,0,.4959);box-shadow:0 0 6px rgba(0,0,0,.4959);-webkit-transition:all .3s ease;transition:all .3s ease}.highlight{padding:1px 0 0 0;border-radius:100px;background:-webkit-gradient(linear,left top,right top,from(rgba(253,148,244,0)),color-stop(#fd94f4),color-stop(#01b4ff),to(rgba(1,180,255,0)));background:linear-gradient(to right,rgba(253,148,244,0),#fd94f4,#01b4ff,rgba(1,180,255,0));background-repeat:no-repeat;background-size:130% 35%;background-position:-64% 0}.footer{background-color:#0c081a;padding-bottom:38px}.footer__list{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-ms-flex-pack:distribute;justify-content:space-around}.footer__link{font-family:"SF Pro Display Light";color:#55525d;font-size:13px;line-height:18px;border-bottom:solid 1px #55525d}.btn__continue{background-color:#fff;border-radius:100px}.btn__continue .link{font-family:"SF Pro Display semibold";color:#070b33;font-size:20px;line-height:24px;text-align:center;display:block;padding:16px 0}.no-webp .main{background-image:url(../img/bg.jpg)}.main{position:relative;background-size:cover;background-position:center}*{-webkit-box-sizing:border-box;box-sizing:border-box}body,html{font-family:SF Pro Display;height:100%}.wrapper{position:relative;max-width:390px;margin:0 auto;min-height:100%;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-direction:column;flex-direction:column}.main{-webkit-box-flex:1;-ms-flex:1 1 auto;flex:1 1 auto}.webp .modal__feature:first-child{background-image:url(../img/featureBg1.webp)}.webp .modal__feature:nth-child(2){background-image:url(../img/featureBg2.webp)}.webp .modal__feature:nth-child(3){background-image:url(../img/featureBg3.webp)}.webp .main{background-image:url(../img/bg.webp)}
+@font-face {
+  font-family: "Roboto";
+  font-display: swap;
+  src: url("../fonts/Roboto-Bold.woff2") format("woff2"), url("../fonts/Roboto-Bold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: "SF Pro Display Ultra Light";
+  font-display: swap;
+  src: url("../fonts/SF-Pro-Display-Ultralight.woff2") format("woff2"), url("../fonts/SF-Pro-Display-Ultralight.woff") format("woff");
+  font-weight: 200;
+  font-style: normal;
+}
+@font-face {
+  font-family: "SF Pro Display Light";
+  font-display: swap;
+  src: url("../fonts/SF-Pro-Display-Lightt.woff2") format("woff2"), url("../fonts/SF-Pro-Display-Light.woff") format("woff");
+  font-weight: 200;
+  font-style: normal;
+}
+@font-face {
+  font-family: "SF Pro Display regular";
+  font-display: swap;
+  src: url("../fonts/sfprodisplayregular.woff2") format("woff2"), url("../fonts/sfprodisplayregular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "SF Pro Display medium";
+  font-display: swap;
+  src: url("../fonts/sfprodisplaymedium.woff2") format("woff2"), url("../fonts/sfprodisplaymedium.woff") format("woff");
+  font-weight: 590;
+  font-style: normal;
+}
+@font-face {
+  font-family: "SF Pro Display semibold";
+  font-display: swap;
+  src: url("../fonts/SF-Pro-Display-Semibold.woff2") format("woff2"), url("../fonts/SF-Pro-Display-Semibold.woff") format("woff");
+  font-weight: 600;
+  font-style: normal;
+}
+@font-face {
+  font-family: "SF Pro Display heavy";
+  font-display: swap;
+  src: url("../fonts/sfprodisplayheavy.woff2") format("woff2"), url("../fonts/sfprodisplayheavy.woff") format("woff");
+  font-weight: 850;
+  font-style: normal;
+}
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+input:focus {
+  outline: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.modal {
+  position: absolute;
+  top: -120px;
+  z-index: 1;
+  padding: 0 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  height: 100%;
+  width: 100%;
+}
+@media (max-width: 390px) {
+  .modal {
+    top: -80px;
+  }
+}
+.modal__subscriptions {
+  margin-bottom: 8px;
+}
+.modal__close {
+  cursor: pointer;
+  margin-bottom: auto;
+  margin-top: 170px;
+  width: max-content;
+}
+@media (max-width: 390px) {
+  .modal__close {
+    margin-top: 116px;
+  }
+}
+.modal__title {
+  font-family: "SF Pro Display heavy";
+  color: #FFFFFF;
+  font-size: 42px;
+  line-height: 46px;
+  text-align: center;
+  margin-bottom: 24px;
+}
+.modal__features {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 34px;
+}
+.modal__feature {
+  display: flex;
+  align-items: flex-end;
+  width: 118px;
+  height: 162px;
+  border-radius: 11.4px;
+  background-size: cover;
+  background-position: center;
+}
+@media (max-width: 400px) {
+  .modal__feature {
+    width: 114px;
+    height: 153px;
+  }
+}
+@media (max-width: 390px) {
+  .modal__feature {
+    width: 110px;
+    height: 146px;
+  }
+}
+@media (max-width: 380px) {
+  .modal__feature {
+    width: 106px;
+    height: 139px;
+  }
+}
+.modal__feature:first-child {
+  background-image: url("../img/featureBg1.png");
+}
+@supports (background-image: image-set(url("../img/featureBg1.webp") 1x)) {
+  .modal__feature:first-child {
+    background-image: image-set(url("../img/featureBg1.webp") 1x, url("../img/featureBg1@2x.webp") 2x, url("../img/featureBg1@3x.webp") 3x);
+  }
+}
+@media only screen and (min-device-pixel-ratio: 2) {
+  .modal__feature:first-child {
+    background-image: url("../img/featureBg1@2x.png");
+  }
+}
+@media only screen and (min-device-pixel-ratio: 3) {
+  .modal__feature:first-child {
+    background-image: url("../img/featureBg1@3x.png");
+  }
+}
+.modal__feature:nth-child(2) {
+  background-image: url("../img/featureBg2.png");
+}
+@supports (background-image: image-set(url("../img/featureBg2.webp") 1x)) {
+  .modal__feature:nth-child(2) {
+    background-image: image-set(url("../img/featureBg2.webp") 1x, url("../img/featureBg2@2x.webp") 2x, url("../img/featureBg2@3x.webp") 3x);
+  }
+}
+@media only screen and (min-device-pixel-ratio: 2) {
+  .modal__feature:nth-child(2) {
+    background-image: url("../img/featureBg2@2x.png");
+  }
+}
+@media only screen and (min-device-pixel-ratio: 3) {
+  .modal__feature:nth-child(2) {
+    background-image: url("../img/featureBg2@3x.png");
+  }
+}
+.modal__feature:nth-child(3) {
+  background-image: url("../img/featureBg3.png");
+}
+@supports (background-image: image-set(url("../img/featureBg3.webp") 1x)) {
+  .modal__feature:nth-child(3) {
+    background-image: image-set(url("../img/featureBg3.webp") 1x, url("../img/featureBg3@2x.webp") 2x, url("../img/featureBg3@3x.webp") 3x);
+  }
+}
+@media only screen and (min-device-pixel-ratio: 2) {
+  .modal__feature:nth-child(3) {
+    background-image: url("../img/featureBg3@2x.png");
+  }
+}
+@media only screen and (min-device-pixel-ratio: 3) {
+  .modal__feature:nth-child(3) {
+    background-image: url("../img/featureBg3@3x.png");
+  }
+}
+.modal__feature-text {
+  font-family: "SF Pro Display regular";
+  color: #FFFFFF;
+  font-size: 12px;
+  line-height: 100%;
+  padding: 12px 8px;
+  min-height: 24px;
+}
+
+.subscription {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #25212F;
+  border-radius: 100px;
+  padding: 9px 56px 9px 24px;
+  margin-bottom: 8px;
+  position: relative;
+  cursor: pointer;
+  border: 1px solid transparent;
+  transition: all 0.3s ease;
+  min-height: 56px;
+}
+.subscription--active {
+  background-color: #54535A;
+  border: 1px solid #FFFFFF;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+.subscription--active .subscription__label {
+  background-image: linear-gradient(to right, #FFFFFF, #FFFFFF);
+  color: #141131;
+  box-shadow: none;
+}
+.subscription--active .subscription__label-wrapper {
+  background-image: linear-gradient(to right, #FFFFFF, #FFFFFF);
+}
+.subscription__type {
+  font-family: "SF Pro Display semibold";
+  color: #FFFFFF;
+  font-size: 16px;
+  line-height: 100%;
+  text-transform: uppercase;
+}
+.subscription__price, .subscription__description {
+  font-family: "SF Pro Display regular";
+  color: #BDBCBF;
+  font-size: 16px;
+  line-height: 100%;
+}
+.subscription__wrapper {
+  padding: 1px;
+  border-radius: 100px;
+  background-image: linear-gradient(to right, #ff96f4, #632af7, #00b5ff);
+}
+.subscription__label-wrapper {
+  display: inline-block;
+  padding: 1px;
+  border-radius: 100px;
+  background-image: linear-gradient(to right, #ff96f4, #632af7, #01b4ff);
+  position: absolute;
+  top: -10px;
+  right: 25px;
+}
+.subscription__label {
+  font-family: "Roboto";
+  color: #FFFFFF;
+  font-size: 13px;
+  line-height: 100%;
+  font-weight: 700;
+  display: inline-block;
+  background-image: linear-gradient(to right, #bc1fef, #0035ff);
+  border-radius: 100px;
+  padding: 2px 22px;
+  text-transform: uppercase;
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.4959);
+  transition: all 0.3s ease;
+}
+
+.highlight {
+  padding: 1px 0px 0px 0px;
+  border-radius: 100px;
+  background: linear-gradient(to right, rgba(253, 148, 244, 0), #fd94f4, #01b4ff, rgba(1, 180, 255, 0));
+  background-repeat: no-repeat;
+  background-size: 130% 35%;
+  background-position: -64% 0%;
+}
+
+.footer {
+  background-color: #0C081A;
+  padding-bottom: 38px;
+}
+.footer__list {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.footer__link {
+  font-family: "SF Pro Display Light";
+  color: #55525D;
+  font-size: 13px;
+  line-height: 18px;
+  border-bottom: solid 1px #55525D;
+}
+
+.btn__continue {
+  background-color: #FFFFFF;
+  border-radius: 100px;
+}
+.btn__continue .link {
+  font-family: "SF Pro Display semibold";
+  color: #070B33;
+  font-size: 20px;
+  line-height: 24px;
+  text-align: center;
+  display: block;
+  padding: 16px 0;
+}
+
+.main {
+  background-image: url("../img/bg.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+@media (max-width: 380px) {
+  .main {
+    background-position: 0 15%;
+  }
+}
+@supports (background-image: image-set(url("../img/bg.webp") 1x)) {
+  .main {
+    background-image: image-set(url("../img/bg.webp") 1x, url("../img/bg@2x.webp") 2x, url("../img/bg@3x.webp") 3x);
+  }
+}
+@media only screen and (min-resolution: 192dpi), only screen and (min-device-pixel-ratio: 2) {
+  .main {
+    background-image: url("../img/bg@2x.jpg");
+  }
+}
+@media only screen and (min-resolution: 288dpi), only screen and (min-device-pixel-ratio: 3) {
+  .main {
+    background-image: url("../img/bg@3x.jpg");
+  }
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  font-family: SF Pro Display;
+  height: 100%;
+  background-color: #0C081A;
+}
+
+.wrapper {
+  position: relative;
+  max-width: 430px;
+  margin: 0 auto;
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.main {
+  flex: 1 1 auto;
+}

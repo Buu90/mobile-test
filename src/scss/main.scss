@@ -1,6 +1,24 @@
 .main {
-    position: relative;
-    background-image: url('../img/bg.jpg');
-    background-size: cover;
-    background-position: center;
+  background-image: url('../img/bg.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  @media (max-width: 380px) {
+    background-position: 0 15%;
+  }
+  @supports (background-image: image-set(url("../img/bg.webp") 1x)) {
+    background-image: image-set(
+      url('../img/bg.webp') 1x,
+      url('../img/bg@2x.webp') 2x,
+      url('../img/bg@3x.webp') 3x
+    );
+  }
+
+  @media only screen and (min-resolution: 192dpi), only screen and (min-device-pixel-ratio: 2) {
+    background-image: url('../img/bg@2x.jpg');
+  }
+
+  @media only screen and (min-resolution: 288dpi), only screen and (min-device-pixel-ratio: 3) {
+    background-image: url('../img/bg@3x.jpg');
+  }
 }

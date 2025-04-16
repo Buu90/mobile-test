@@ -27,10 +27,11 @@ import { otfToTtf, ttfToWoff, fontsStyle } from './gulp/tasks/fonts.js'
 import { svgSprive } from './gulp/tasks/svgSprive.js'
 import { zip } from './gulp/tasks/zip.js'
 import { ftp } from './gulp/tasks/ftp.js'
+import { createRetinaImages } from './gulp/tasks/retinaImages.js' // Новый импорт
 
 // Наблюдатель за изменениями в файлах
 function watcher() {
-  gulp.watch(path.watch.files, copy) // заменить "copy" на gulp.series(html, ftp) и так в каждой задачи, только менять "copy". Обновление в реальном времени на сервере
+  gulp.watch(path.watch.files, copy)
   gulp.watch(path.watch.html, html)
   gulp.watch(path.watch.scss, scss)
   gulp.watch(path.watch.js, js)
@@ -41,13 +42,16 @@ export { svgSprive }
 
 // Последовательная обработка шрифтов
 const fonts = gulp.series(otfToTtf, ttfToWoff, fontsStyle)
+
 // Основные задачи
 const mainTasks = gulp.series(
   fonts,
-  gulp.parallel(copy, html, scss, js, images),
+  gulp.parallel(copy, html, scss, js),
+  createRetinaImages,
+  images
 )
 
-// Построение сценариев выполнение задач
+// Построение сценариев выполнения задач
 const dev = gulp.series(reset, mainTasks, gulp.parallel(watcher, server))
 const build = gulp.series(reset, mainTasks)
 const deployZIP = gulp.series(reset, mainTasks, zip)
@@ -57,6 +61,7 @@ const deployFTP = gulp.series(reset, mainTasks, ftp)
 export { dev }
 export { build }
 export { deployZIP }
+export { createRetinaImages } // Экспорт новой задачи
 
 // Выполнение сценария по умолчанию
 gulp.task('default', dev)

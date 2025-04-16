@@ -1,6 +1,6 @@
 .modal {
   position: absolute;
-  top: -80px;
+  top: -120px;
   z-index: 1;
   padding: 0 24px;
   display: flex;
@@ -8,14 +8,20 @@
   justify-content: end;
   height: 100%;
   width: 100%;
+  @media (max-width: 390px) {
+    top: -80px;
+  }
   &__subscriptions {
     margin-bottom: 8px;
   }
   &__close {
     cursor: pointer;
     margin-bottom: auto;
-    margin-top: 116px;
+    margin-top: 170px;
     width: max-content;
+    @media (max-width: 390px) {
+      margin-top: 116px;
+    }
   }
   &__title {
     @include title();
@@ -30,24 +36,89 @@
   &__feature {
     display: flex;
     align-items: flex-end;
-    width: 110px;
-    height: 146px;
+    width: 118px;
+    height: 162px;
     border-radius: 11.4px;
     background-size: cover;
     background-position: center;
 
-    &:first-child {
-      background-image: url('../img/featureBg1.png');
+    @media (max-width: 400px) {
+      width: 114px;
+      height: 153px;
     }
 
+    @media (max-width: 390px) {
+      width: 110px;
+      height: 146px;
+    }
+
+    @media (max-width: 380px) {
+      width: 106px;
+      height: 139px;
+    }
+
+    &:first-child {
+      // Fallback (обычный PNG)
+      background-image: url('../img/featureBg1.png');
+  
+      // WebP с ретиной
+      @supports (background-image: image-set(url("../img/featureBg1.webp") 1x)) {
+        background-image: image-set(
+          url('../img/featureBg1.webp') 1x,
+          url('../img/featureBg1@2x.webp') 2x,
+          url('../img/featureBg1@3x.webp') 3x
+        );
+      }
+  
+      // Retina fallback для старых браузеров
+      @media only screen and (min-device-pixel-ratio: 2) {
+        background-image: url('../img/featureBg1@2x.png');
+      }
+  
+      @media only screen and (min-device-pixel-ratio: 3) {
+        background-image: url('../img/featureBg1@3x.png');
+      }
+    }
+  
     &:nth-child(2) {
       background-image: url('../img/featureBg2.png');
+  
+      @supports (background-image: image-set(url("../img/featureBg2.webp") 1x)) {
+        background-image: image-set(
+          url('../img/featureBg2.webp') 1x,
+          url('../img/featureBg2@2x.webp') 2x,
+          url('../img/featureBg2@3x.webp') 3x
+        );
+      }
+  
+      @media only screen and (min-device-pixel-ratio: 2) {
+        background-image: url('../img/featureBg2@2x.png');
+      }
+  
+      @media only screen and (min-device-pixel-ratio: 3) {
+        background-image: url('../img/featureBg2@3x.png');
+      }
     }
-
+  
     &:nth-child(3) {
       background-image: url('../img/featureBg3.png');
+  
+      @supports (background-image: image-set(url("../img/featureBg3.webp") 1x)) {
+        background-image: image-set(
+          url('../img/featureBg3.webp') 1x,
+          url('../img/featureBg3@2x.webp') 2x,
+          url('../img/featureBg3@3x.webp') 3x
+        );
+      }
+  
+      @media only screen and (min-device-pixel-ratio: 2) {
+        background-image: url('../img/featureBg3@2x.png');
+      }
+  
+      @media only screen and (min-device-pixel-ratio: 3) {
+        background-image: url('../img/featureBg3@3x.png');
+      }
     }
-
   }
   &__feature-text {
     @include feature();
@@ -78,12 +149,11 @@
       background-image: linear-gradient(to right, $white, $white);
       color: $dark5;
       box-shadow: none;
-
     }
     .subscription__label-wrapper {
       background-image: linear-gradient(to right, $white, $white);
     }
-  }  
+  }
   &__type {
     @include subscription-type();
     text-transform: uppercase;
@@ -123,7 +193,13 @@
 .highlight {
   padding: 1px 0px 0px 0px;
   border-radius: 100px;
-  background: linear-gradient(to right, rgba(253, 148, 244, 0), $pink, $blue, rgba(1, 180, 255, 0));
+  background: linear-gradient(
+    to right,
+    rgba(253, 148, 244, 0),
+    $pink,
+    $blue,
+    rgba(1, 180, 255, 0)
+  );
   background-repeat: no-repeat;
   background-size: 130% 35%;
   background-position: -64% 0%;
