@@ -6,39 +6,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <link rel="icon" type="image/x-icon" href="img/favicon.ico">
     <link rel="stylesheet" href="css/style.min.css">
-    <title>Home</title>
+    <title>Главная</title>
 </head>
   <body>
     <div class="wrapper">
         <div class="modal" id="modal">
-  <div class="modal__close" id="closeModalBtn">
-    <img src="img/cross.svg" alt="" data-translate="Restore">
-  </div>
-  <h2 class="modal__title" data-translate="Get Unlimited <br>Access" data-max-length="20"></h2>
-  <div class="language-switcher">
-    <a href="?lang=en">English</a>
-    <a href="?lang=es">Español</a>
-    <a href="?lang=fr">Français</a>
-    <a href="?lang=de">Deutsch</a>
-    <a href="?lang=ja">日本語</a>
-    <a href="?lang=pt">Português</a>
-  </div>
-  <div class="modal__features">
-    <div class="modal__feature">
+  <div class="modal__content">
+    <div class="modal__close" id="closeModalBtn">
+      <img src="img/cross.svg" alt="" data-translate="Restore">
+    </div>
+    <h2 class="modal__title" data-translate="Get Unlimited <br>Access" data-max-length="20"></h2>
+    <div class="modal__features">
+      <div class="modal__feature">
     <p class="modal__feature-text" data-translate="Unlimited Art <br>Creation"></p>
   </div>
-  
-    <div class="modal__feature">
+    
+      <div class="modal__feature">
     <p class="modal__feature-text" data-translate="Exclusive <br>Styles"></p>
   </div>
-  
-    <div class="modal__feature">
+    
+      <div class="modal__feature">
     <p class="modal__feature-text" data-translate="Magic Avatars <br>With 20% Off"></p>
   </div>
-  </div>
-  <div class="modal__subscriptions">
-    <div class="highlight">
-      <div class="subscription subscription--best-offer" data-subscription="yearly" data-url="https://apple.com/">
+    </div>
+    <div class="modal__subscriptions">
+      <div class="highlight">
+        <div class="subscription subscription--best-offer" data-subscription="yearly" data-url="https://apple.com/">
 
     <div class="subscription__label-wrapper" style="display: block;">
       <span class="subscription__label" data-translate="BEST OFFER"></span>
@@ -53,8 +46,8 @@
       <p class="subscription__price" data-translate="{{price}} <br>per week" data-max-length="20"></p>
     </div>
   </div>
-    </div>
-      <div class="subscription " data-subscription="weekly" data-url="https://google.com/">
+      </div>
+        <div class="subscription " data-subscription="weekly" data-url="https://google.com/">
 
     <div class="subscription__label-wrapper" style="display: none;">
       <span class="subscription__label" data-translate=""></span>
@@ -69,13 +62,15 @@
       <p class="subscription__price" data-translate="{{price}} <br>per week" data-max-length="20"></p>
     </div>
   </div>
-  </div>
-  <div class="btn">
-    <div class="btn__continue">
+    </div>
+    <div class="btn">
+      <div class="btn__continue">
     <a class="link" id="continueLink" href="#" data-translate="Continue"></a>
 </div>
+    </div>
   </div>
 </div>
+
         <main class="main"></main>
         <footer class="footer">
     <ul class="footer__list">
