@@ -20,11 +20,36 @@ async function loadLanguageFile(lang) {
   }
 }
 
+const mockPrices = {
+  yearly: {
+    yearly: "$39.99",
+    weekly: "$0.48"
+  },
+  weekly: {
+    yearly: "",
+    weekly: "$6.99"
+  }
+};
+
 function updateTexts(translations) {
   document.querySelectorAll('[data-translate]').forEach(element => {
     const key = element.getAttribute('data-translate');
-    if (translations[key]) {
-      element.innerHTML = translations[key];
+    let translation = translations[key];
+
+    if (translation) {
+      const subscriptionEl = element.closest('.subscription');
+      const planType = subscriptionEl?.getAttribute('data-subscription') || 'weekly';
+
+      if (translation.includes('{{price}}')) {
+        const isYearlyPrice = key.toLowerCase().includes('year');
+        const price = isYearlyPrice
+          ? mockPrices[planType].yearly
+          : mockPrices[planType].weekly;
+
+        translation = translation.replace('{{price}}', price);
+      }
+
+      element.innerHTML = translation;
     }
   });
 
