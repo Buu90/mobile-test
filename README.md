@@ -62,10 +62,10 @@ npm run build
 Адаптив под ширины от 375px до 430px
 
 ### pixel perfect for 390px
-![Screenshot 390px](../img/test390.png)
+![Screenshot 390px](img/test390.png)
 
 ### pixel perfect for 375px
-![Screenshot 375px](../img/test375.png)
+![Screenshot 375px](img/test375.png)
 
 Тестирование производилось на эмуляторах iPhone в Chrome DevTools
 
