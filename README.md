@@ -65,7 +65,7 @@ npm run build
 ![Screenshot 390px](https://buu90.github.io/mobile-test/dist/img/test390.png)
 
 ### pixel perfect for 375px
-![Screenshot 375px](https://buu90.github.io/mobile-test/dist/img/test370.png)
+![Screenshot 375px](https://buu90.github.io/mobile-test/dist/img/test375.png)
 
 Тестирование производилось на эмуляторах iPhone в Chrome DevTools
 
