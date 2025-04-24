@@ -10,7 +10,10 @@
   max-height: 100dvh;
   width: 100%;
   @media (max-width: 390px) {
-    top: -80px;
+    top: -93px;
+  }
+  @media (max-width: 375px) {
+    top: -53px;
   }
   &__content {
     height: 100%; 
@@ -19,6 +22,9 @@
   }
   &__subscriptions {
     margin-bottom: 8px;
+    @media (max-width: 375px) {
+      margin-bottom: 0;
+    }
   }
   &__close {
     cursor: pointer;
@@ -26,18 +32,29 @@
     margin-top: 170px;
     width: max-content;
     @media (max-width: 390px) {
-      margin-top: 116px;
+      margin-top: 154px;
+      margin-left: -6px;
+    }
+    @media (max-width: 375px) {
+      margin-top: 91px;
+      margin-left: -6px;
     }
   }
   &__title {
     @include title();
     text-align: center;
     margin-bottom: 24px;
+    @media (max-width: 375px) {
+      margin-bottom: 15px;
+    }
   }
   &__features {
     display: flex;
     justify-content: space-between;
     margin-bottom: 34px;
+    @media (max-width: 375px) {
+      margin-bottom: 26px;
+    }
   }
   &__feature {
     display: flex;

@@ -1,7 +1,7 @@
 .main {
   background-image: url('../img/bg.jpg');
   background-size: cover;
-  background-position: center;
+  background-position: top;
   background-repeat: no-repeat;
   @media (max-width: 380px) {
     background-position: 0 15%;
